@@ -1,0 +1,108 @@
+body{
+    font-family: "Oxanium", cursive;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/*cria um peseldo elemento/ elemento html pelo css*/
+/*antes do body ele vai criar um peseldo elemento*/
+body::before{
+    content: ""; /*cria um conteudo*/
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: no-repeat; /*não repeti o fundo*/
+    background-size: cover; /* tamanho do background, e vai cobrir*/
+    background-position: center; /*posiciona no centro*/
+    width: 100%;
+    height: 100%;
+    position: absolute; /* ele vai ficar abisolutamente posicionado (camada)*/
+    z-index: -1; /* joga a camada para ficar na parte de fundo de tudo*/
+    opacity: 0.2;
+}
+
+/*centralização e alinhamento dos objetos*/
+.cabecalho{
+    display: flex;
+    justify-content: center; /*pala alinhar o filho é preciso colocar uma propriedade no pai*/ /* alinhamento horizontal*/
+}
+
+.selecao-de-personagens{
+    display: flex;
+    align-items: center; /*alinhamento vertical*/
+    gap: 30px;
+    min-height: calc(100vh - 160px); /*altura da tela do seu navegador - altura do cabeçalho*/
+    justify-content: center;
+}
+
+/*Especificando um elemento que está dentro de outro elemento*/
+.selecao-de-personagens .lista-de-personagens{
+    display: flex;
+    flex-wrap: wrap; /* quebra os elementos um para baixo do outro quando não tiver mais espaço */
+    gap: 30px; /*espaçamento entre os intens */
+    justify-content: center;
+}
+
+.selecao-de-personagens .personagens{
+    display: flex;
+    flex-direction: column; /*coloca um flilho em baixa do outro*/
+    align-items: center;
+    max-width: 585px; /*define a largura maxima do elemento*/
+    gap: 25px;
+}
+
+.selecao-de-personagens .personagens .titulo{
+    font-size: 20px;
+    letter-spacing: 4px; /*espaçamento entre letras*/
+    text-transform: uppercase; /* transforma um texto em maiúsculo*/
+    border-bottom: 2px solid #47f4ff;
+    width: 100%; /*ele vai pegar 100% da largura do pai*/
+    text-align: center;
+}
+
+.lista-de-personagens .personagem{
+    border-bottom: 4px solid #47f4ff;
+}
+
+.lista-de-personagens .personagem img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*selecionando um elemento que tem duas classes iguais*/
+.lista-de-personagens .personagem.selecionado{
+    box-shadow: 0px 0px 24px 5px #0271f7; /*sombra da caixa*/
+}
+
+.personagem-selecionado{
+    text-align: center;
+    max-height: 500px; /*altura maxima da imagem*/
+    /*border: 5px solid white;*/
+}
+
+.personagem-selecionado .personagem-grande{
+    width: 385px; /*largura*/
+    height: 385px; /*altura*/
+}
+/*
+.poder{
+    border: 5px solid greenyellow;
+    display: flex;
+}
+.flex-item{
+    background-color: blue;
+    border: 2px solid white;
+}
+*/
+.personagem-selecionado .nome-personagem{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.personagem-selecionado .descricao-personagem{
+    font-size: 16px;
+    line-height: 22px; /*altura da linha*/
+    text-align: center; 
+    margin-top: 15px; /* margem entre o texto e o titulo */
+    width: 420px;
+}
