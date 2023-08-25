@@ -1,5 +1,5 @@
 # Projeto X-men
-![Logo_X-men](https://github.com/italoffr/projeto_x-men_1/blob/master/x-men/src/imagens/logo.svg)
+![Logo_X-men](https://github.com/italoffr/projeto_x-men/blob/main/src/imagens/logo.svg)
 
 ## Projeto de desenvolvimento utilizando as linguagens HTML5, CSS3 e Java Script
 
